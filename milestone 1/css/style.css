@@ -60,6 +60,9 @@ a{
     align-self: flex-start;
     background-color: #ffff;
 }
+.active{
+    background-color: lightgray;
+}
 
 /* Col in app container */
 .col-user-and-contact,
@@ -86,7 +89,6 @@ a{
 }
 .user-img-and-name,
 .user-and-contact-icon{
-    width: 50%;
     display: flex;
     align-items: center;
 
@@ -94,13 +96,12 @@ a{
 /* User img and name */
 .user-img-and-name{
     padding: 10px;
+    width: 70%;
 }
 /* User img */
 .user-img{
     width: 40px;
-    min-width: 30px;
     height: 40px;
-    min-height: 30px;
     overflow: hidden;
 }
 .user-img img{
@@ -113,7 +114,8 @@ a{
 }
 /* User and contact icon */
 .user-and-contact-icon{
-    justify-content: right;
+    justify-content: flex-end;
+    width: 30%;
 }
 .user-and-contact-icon ul{
     display: flex;
@@ -190,6 +192,7 @@ a{
     padding: 10px;
     display: flex;
     border-top: 1px solid #eaeaea;
+    cursor: pointer;
 }
 /* Single user chat img */
 .single-user-chat-img{
@@ -262,9 +265,10 @@ a{
     font-size: 20px;
     color: #899091;
 }
+/* Message area text */
 .message-area-text{
     flex-grow: 1;
 }
 .message-area-text input{
-    padding: 10px;
+    padding: 15px;
 }

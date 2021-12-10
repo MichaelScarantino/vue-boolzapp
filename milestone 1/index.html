@@ -66,35 +66,13 @@
                     <!-- Contact list -->
                     <div class="contact-list">
                         <!-- Single user chat -->
-                        <div class="single-user-chat">
+                        <div @click="imageCurrentactive(index)" v-for="(contact, index) in contacts" class="single-user-chat" :class="{'active' : index === currentContactActive}">
                             <!-- Single user chat img -->
                             <div class="single-user-chat-img">
-                                <img src="img/avatar_1.jpg" alt="">
+                                <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                             </div>
                             <div class="single-user-chat-name">
-                                Francesco
-                            </div>
-                        </div>
-
-                        <!-- Single user chat -->
-                        <div class="single-user-chat">
-                            <!-- Single user chat img -->
-                            <div class="single-user-chat-img">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div class="single-user-chat-name">
-                                Francesco
-                            </div>
-                        </div>
-
-                        <!-- Single user chat -->
-                        <div class="single-user-chat">
-                            <!-- Single user chat img -->
-                            <div class="single-user-chat-img">
-                                <img src="img/avatar_1.jpg" alt="">
-                            </div>
-                            <div class="single-user-chat-name">
-                                Francesco
+                                {{ contact.name }}
                             </div>
                         </div>
                     </div>
@@ -107,11 +85,11 @@
                         <div class="user-img-and-name">
                             <!-- User img -->
                             <div class="user-img">
-                                <img src="img/avatar_io.jpg" alt="">
+                                <img :src="'img/avatar' + contacts[currentContactActive].avatar + '.jpg'" alt="">
                             </div>
                             <!-- User name -->
                             <div class="user-name">
-                                Michael Scarantino
+                                {{ contacts[currentContactActive].name }}
                                 <p>Ultimo accesso oggi alle</p>
                             </div>
                         </div>
@@ -136,24 +114,9 @@
                         <!-- Chat area container -->
                         <div class="chat-area-container">
                             <!-- Single message -->
-                            <div class="single-message message-received">
-                                <p>ciao come stai? io tutt</p>
-                                <span>10/05/2021 10:40:23</span>
-                            </div>
-                            <!-- Single message -->
-                            <div class="single-message message-sent">
-                                <p>ciao come stai? io tutt</p>
-                                <span>10/05/2021 10:40:23</span>
-                            </div>
-                            <!-- Single message -->
-                            <div class="single-message message-received">
-                                <p>ciao come stai? io tutt</p>
-                                <span>10/05/2021 10:40:23</span>
-                            </div>
-                            <!-- Single message -->
-                            <div class="single-message message-sent">
-                                <p>ciao come stai? io tutt</p>
-                                <span>10/05/2021 10:40:23</span>
+                            <div class="single-message">
+                                <p></p>
+                                <span></span>
                             </div>
                         </div>
                     </div>
