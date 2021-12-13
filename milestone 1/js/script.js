@@ -97,9 +97,7 @@ const app = new Vue(
             ],
         },
         methods: {
-            imageCurrentactive: function(index) {
-                this.currentContactActive = index
-            },
+            
         }
     }
 );

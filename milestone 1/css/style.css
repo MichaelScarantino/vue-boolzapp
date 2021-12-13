@@ -18,7 +18,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #019688;
+    background: linear-gradient(to bottom, #009688 0px, #009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
+    ;
 }
 /* App container */
 .app-container{
@@ -236,7 +237,7 @@ a{
 .single-message{
     font-size: 14px;
     max-width: 40%;
-    min-width: 40%;
+    min-width: 35%;
     border-radius: 5px;
     margin-bottom: 10px;
     position: relative;
