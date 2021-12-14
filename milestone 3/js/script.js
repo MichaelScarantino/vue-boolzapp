@@ -100,23 +100,25 @@ const app = new Vue(
                 this.currentContactActive = index
             },
             addMessage: function(currentContactActive) {
-                this.contacts[currentContactActive].messages.push(
-                    {
-                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                        text: this.newMessage,
-                        status: 'sent'
-                    },
-                );
-                this.newMessage = "";
-                setTimeout(() => {
+                if(this.newMessage.trim().length > 0) {
                     this.contacts[currentContactActive].messages.push(
                         {
                             date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                            text: 'ok',
-                            status: 'received'
+                            text: this.newMessage,
+                            status: 'sent'
                         },
                     );
-                }, 1000);
+                    this.newMessage = "";
+                    setTimeout(() => {
+                        this.contacts[currentContactActive].messages.push(
+                            {
+                                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                                text: 'ok',
+                                status: 'received'
+                            },
+                        );
+                    }, 1000);
+                }
             },
             
         }
